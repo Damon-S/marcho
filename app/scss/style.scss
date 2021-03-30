@@ -22,9 +22,11 @@
 
     &__item:not(:last-child) {
         margin-right: 35px;
+        @extend %quicksand-400;
     }
 
     &__link {
+        @extend %quicksand-400;
         color: $title;
         text-transform: uppercase;
         border-bottom: 1px solid transparent;
@@ -33,12 +35,14 @@
     }
 
     &__link--active {
+        @extend %quicksand-500;
         color: $accent;
         border-color: $accent;
     }
 
     &__link:focus,
     &__link:hover {
+        @extend %quicksand-500;
         outline: transparent;
         border-color: $accent;
         color: $accent;
@@ -49,34 +53,31 @@
 .user-nav {
     display: flex;
 
-    &__item:not(:last-child) {
-        margin-right: 45px;
+    &__item {
+        margin-right: 25px;
     }
 
     &__link {
+
+        display: block;
+        width: 20px;
+        height: 20px;
         position: relative;
     }
 
-    &__link::before {
-        content: '';
-        position: absolute;
-        width: 20px;
-        height: 20px;
-    }
-
-    &__link--user::before {
+    &__link--user {
         background-image: url('../images/icons/user.svg');
     }
 
-    &__link--search::before {
+    &__link--search {
         background-image: url('../images/icons/search.svg');
     }
 
-    &__link--heart::before {
+    &__link--heart {
         background-image: url('../images/icons/heart.svg');
     }
 
-    &__link--cart::before {
+    &__link--cart {
         background-image: url('../images/icons/cart.svg');
         width: 22px;
     }
@@ -92,7 +93,7 @@
         text-align: center;
         line-height: 20px;
         top: -9px;
-        right: -34px;
+        right: -14px;
     }
 
     &__link--heart::after {
