@@ -5,8 +5,104 @@
 
 
 
+.header {
+    padding: 40px 0;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 35px;
+    }
+
+    &__link {
+        color: $title;
+        text-transform: uppercase;
+        border-bottom: 1px solid transparent;
+        padding-bottom: 1px;
+        transition: border-color, color 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    &__link--active {
+        color: $accent;
+        border-color: $accent;
+    }
+
+    &__link:focus,
+    &__link:hover {
+        outline: transparent;
+        border-color: $accent;
+        color: $accent;
+    }
+}
 
 
+.user-nav {
+    display: flex;
+
+    &__item:not(:last-child) {
+        margin-right: 25px;
+    }
+
+    &__link {
+        position: relative;
+    }
+
+    &__link::before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+    }
+
+    &__link--user::before {
+        background-image: url('../images/icons/user.svg');
+    }
+
+    &__link--search::before {
+        background-image: url('../images/icons/search.svg');
+    }
+
+    &__link--heart::before {
+        background-image: url('../images/icons/heart.svg');
+    }
+
+    &__link--cart::before {
+        background-image: url('../images/icons/cart.svg');
+        width: 22px;
+    }
+
+    &__link--heart::after,
+    &__link--cart::after {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: $accent;
+        border-radius: 50%;
+        color: #fff;
+        text-align: center;
+        line-height: 20px;
+        top: -9px;
+        right: -34px;
+    }
+
+    &__link--heart::after {
+        content: '3';
+
+    }
+
+    &__link--cart::after {
+        content: '7';
+    }
+}
 
 
 
