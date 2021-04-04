@@ -19,6 +19,33 @@ body {
     padding: 0 15px;
 }
 
+
+.btn {
+    @extend %roboto-400;
+    border: none;
+    background-color: $accent;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 12px 26px;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+}
+
+.title {
+    @extend %roboto-700;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: $title;
+}
+
+.text {
+    max-width: 570px;
+    text-align: center;
+    margin: 0 auto 60px;
+}
+
 .page {
     flex-grow: 1;
 }
