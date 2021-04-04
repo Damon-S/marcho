@@ -32,3 +32,11 @@ $bg: #f6f6f6;
     font-weight: 700;
     font-style: normal;
 }
+
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
